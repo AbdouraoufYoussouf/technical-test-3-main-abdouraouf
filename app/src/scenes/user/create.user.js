@@ -26,7 +26,7 @@ export const Create = () => {
         if (isSend === true) {setOpen(false);}
     }, [isSend])
 
-    const handleSubmit = async (values) => {
+    const handleSubmit = async (values , {setSubmitting}) => {
         try {
             const abortController = new AbortController(); // Création d'un AbortController
             const signal = abortController.signal;
